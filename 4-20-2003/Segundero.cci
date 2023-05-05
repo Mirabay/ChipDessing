@@ -1,0 +1,6 @@
+VERSION:3 SOURCE_TIMESTAMP:56984857
+NODE:I LEVEL:0 LINE:8 "D:\CodeVisionAVR\inc\mega328p.h"
+NODE:I LEVEL:0 LINE:9 "D:\CodeVisionAVR\inc\delay.h"
+NODE:V LEVEL:0 LINE:11 "SieteSeg -> RAM:????"
+NODE:V LEVEL:0 LINE:13 "seg -> RAM:????"
+NODE:F LEVEL:0 LINE:15 "main(void)"

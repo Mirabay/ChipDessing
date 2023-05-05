@@ -1,0 +1,17 @@
+/*
+ * programa3.c
+ *
+ * Created: 4/20/2023 9:36:56 AM
+ * Author: tonys
+ */
+
+#include <mega328p.h>
+
+void main(void)
+{
+while (1)
+    {
+    // Please write your application code here
+
+    }
+}

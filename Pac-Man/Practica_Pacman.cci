@@ -1,0 +1,11 @@
+VERSION:3 SOURCE_TIMESTAMP:56A354AF
+NODE:I LEVEL:0 LINE:19 "D:\CodeVisionAVR\inc\mega328p.h"
+NODE:I LEVEL:0 LINE:20 "D:\CodeVisionAVR\inc\delay.h"
+NODE:I LEVEL:0 LINE:21 "D:\CodeVisionAVR\inc\display.h"
+NODE:M LEVEL:0 LINE:24 "ADC_VREF_TYPE"
+NODE:F LEVEL:0 LINE:27 "read_adc(unsigned char adc_input)"
+NODE:V LEVEL:0 LINE:41 "i -> R3"
+NODE:V LEVEL:0 LINE:42 "PacMan1 -> RAM:????"
+NODE:V LEVEL:0 LINE:43 "PacMan2 -> RAM:????"
+NODE:F LEVEL:0 LINE:45 "delayPacman(void)"
+NODE:F LEVEL:0 LINE:50 "main(void)"

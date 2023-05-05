@@ -1,0 +1,30 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+PacMan1                                                                           0x0300       8
+PacMan2                                                                           0x0308       8
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+cursor                                                                            R4           1
+i                                                                                 R3           1
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+SetupLCD                                                                          0x00081     41
+PulseEn                                                                           0x000AA      3
+SendDataBitsLCD                                                                   0x000AD     23
+WriteComandLCD                                                                    0x000C4      5
+CharLCD                                                                           0x000C9     27
+StringLCD                                                                         0x000E4     20
+MoveCursor                                                                        0x000F8     36
+CreateChar                                                                        0x0011C     26
+read_adc                                                                          0x00136     29
+delayPacman                                                                       0x00153      6
+main                                                                              0x00159     85

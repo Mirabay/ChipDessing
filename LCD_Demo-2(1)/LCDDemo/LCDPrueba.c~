@@ -1,0 +1,32 @@
+    #include <MEGA328P.h> 
+    #include <delay.h> 
+    #include "display.h"         
+               
+char car0[8]={0x00,0x0A,0x15,0x11,0x0A,0x04,0x00,0x00};
+char car1[8]={0x1F,0x00,0x1F,0x00,0x1F,0x00,0x1F,0x00};    
+
+void main()
+{
+    ConfiguraLCD(); 
+    CreaCaracter(0,car0);  
+    CreaCaracter(1,car1);
+       
+    MoverCursor(5,0);
+    StringLCD("Micros");  
+    MoverCursor(5,1);
+    StringLCD2("Rules!",150);
+    UnderscoreCursor();
+    delay_ms(3000);
+    NoUnderscoreCursor();  
+    delay_ms(3000);
+    BlinkCursor();  
+    delay_ms(3000);
+    NoBlinkCursor(); 
+    delay_ms(3000);
+    DisplayOFF();
+    delay_ms(3000);     
+    DisplayON();    
+    LetraDatoLCD(0);
+    LetraDatoLCD(1);
+    while(1);              
+}
