@@ -15,6 +15,7 @@
 #include <stdio.h>
 
 unsigned char min = 0, seg = 0, dec = 0;
+char cont=0;
 char cadena[17];
 char yo[8]={ 0x0E,
   0x0A,
@@ -32,24 +33,10 @@ char yo2[8]={ 0x0E,
   0x15,
   0x04,
   0x04}; 
-char arbol[8]={ 0x0E,
-  0x0E,
-  0x0E,
-  0x04,
-  0x0E,
-  0x15,
-  0x04,
-  0x04};
-char flor[8]={0x00,
-  0x00,
-  0x00,
-  0x00,
-  0x00,
-  0x0A,
-  0x04,
-  0x04};
-char cont=0;
-char contF=2;
+  
+
+
+
 void main(void)
 {
     SetupLCD();
@@ -57,8 +44,6 @@ void main(void)
     PORTD.1 = 1; //Pullup in PD1
     CreateChar(0,yo);
     CreateChar(1,yo2);
-    CreateChar(2,Arbol);
-    CreateChar(3,flor);
 while (1)
     {
         sprintf(cadena, "%02i:%02i.%i", min, seg, dec);
@@ -84,39 +69,28 @@ while (1)
                 if (min = 60)
                     min = 0;
         
-    }  
-    if (dec>0)
-       {
-        contF++;
-        cont++;
-        if (cont>16)
-            cont=0;
-        if (contF>16)
-            cont=0;
+
+    if (((seg%2)!=0)&& PIND.0==0) {
+        //Limpiamos la parte de abajo
         MoveCursor(0,1);
-        StringLCD("      ");
+        StringLCD("                ");
+        //Movemos el cursor
+        cont=cont+1;
         MoveCursor(cont,1);
-        CharLCD(2);
-        MoveCursor(contF,1);
-        CharLCD(2);
-        MoveCursor(5,1);
-        if(dec%2==0)
-            CharLCD(0);
-        else
-            CharLCD(1);
-        
-       }
-//    if (dec == 0) {
-//        //Mover cursor
-//        //poner monito 1
-//        // Prohibido poner delays
-//        //para quitar animacion se pone un espacio
-//        
-//    }
-//    if (dec == 5) {
-//        //Mover cursor
-//        //poner monito 2
-//        
-//    }
+        CharLCD(0);
+    }
+    if (((seg%2)==0)&& PIND.0==0) {
+        //Limpiamos la parte de abajo
+        MoveCursor(0,1);
+        StringLCD("                ");
+        cont=cont+1;
+        MoveCursor(cont,1);
+        CharLCD(1);
+        if (cont==16)
+            cont=0;
+    }
+    
+   
+ }
 }   
  
